@@ -1,0 +1,53 @@
+Kafka with python in windows
+----------------------
+
+
+1.In windows
+2.Download and extract zookeeper-3.4.14 and kafka_2.12-2.2.0 folders in "C:\Tools" directory
+3.Install Kafka and Zookeeper on your machine.
+	1)Set Environment variables 
+		JRE setup
+			-> download and install JRE if not installed.   http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+			-> set Environmental variable
+				- Hit New User Variable.
+				- Variable name = JAVA_HOME
+				- variable value = give JRE path
+				- Click ok
+				- Hit New System variable
+				- Double click path variable
+				- Click new
+				- Add "%JAVA_HOME%\bin"
+				- Click ok
+				- To confirm the Java installation, just open cmd and type “java –version.” You should be able to see the version of Java you just installed.
+		Zookeeper variable set up
+			-> Set Environment variable
+				- Hit New system variable
+				- Add ZOOKEEPER_HOME = C:\zookeeper-3.4.14 to the System Variables.
+				- Double click path variable
+				- Click new
+				- Add "%ZOOKEEPER_HOME%\bin"
+				- Click ok
+4.Zookeeper installation
+		1. Go to your Zookeeper config directory. For me its C:\zookeeper-3.4.14\conf
+		2. Rename file “zoo_sample.cfg” to “zoo.cfg”
+		3. Open zoo.cfg in any text editor, like Notepad; I prefer Notepad++.
+		4. Find and edit dataDir=/tmp/zookeeper to zookeeper-3.4.14/data  
+		5. You can change the default Zookeeper port in zoo.cfg file (Default port 2181).
+		6. Double click "zkServer" Windows cmd file inside "C:\Tools\zookeeper-3.4.14\bin" directory to start zookeeper
+		
+5.Kafka installation
+	1. Go to your Kafka config directory. For me its C:\kafka_2.11-2.2.0\config
+	2. Edit the file “server.properties.”
+	3. Find and edit the line log.dirs=/tmp/kafka-logs” to “C:\\Tools\\kafka_2.12-2.2.0\\kafka-logs"
+	4. If your Zookeeper is running on some other machine or cluster you can edit “zookeeper.connect:2181” to your custom IP and port.
+     	For this demo, we are using the same machine so there's no need to change. Also the Kafka port and broker.id are configurable in this file. 
+		Leave other settings as is.
+	5.To start Kafka 
+		- Go inside kafka_2.12-2.2.0 directory	
+		- open command promt
+		- run ".\bin\windows\kafka-server-start.bat .\config\server.properties"
+4.Don’t forget to start your Zookeeper server and Kafka broker before executing the example code below. 
+	In this example we assume that Zookeeper is running default on localhost:2181 and Kafka on localhost:9092.
+	
+	
+5. Now your Kafka Server is up and running, you can create topics to store messages.

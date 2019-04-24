@@ -1,0 +1,6 @@
+Kafka reference sites
+-----------------------
+official documentation site kafka- https://kafka.apache.org/documentation/
+Kafka-Python explained in 10 lines of code  - https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1	
+Kafka-python - https://kafka-python.readthedocs.io/en/master/index.html 
+Setting Up and Running Apache Kafka on Windows OS =>https://dzone.com/articles/running-apache-kafka-on-windows-os	 	
