@@ -57,4 +57,5 @@ Kafka with python in windows
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 8.Delete Topic
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --list --zookeeper localhost:2181
+	Then delete the topics manually under 'C:\Tools\kafka_2.12-2.2.0\kafka-logs'
 
