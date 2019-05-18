@@ -53,7 +53,7 @@ Kafka with python in windows
 5. Now your Kafka Server is up and running, you can create topics to store messages.
 6.List down topics.
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --list --zookeeper localhost:2181
-7.List down topics
+7.create down topics
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 8.Delete Topic
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --list --zookeeper localhost:2181
