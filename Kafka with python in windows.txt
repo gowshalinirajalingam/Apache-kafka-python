@@ -57,5 +57,11 @@ Kafka with python in windows
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 8.Delete Topic
 	C:\Tools\kafka_2.12-2.2.0\bin\windows>kafka-topics.bat --list --zookeeper localhost:2181
-	Then delete the topics manually under 'C:\Tools\kafka_2.12-2.2.0\kafka-logs'
+	but here the topic only marked for deletion
+	So got to 'C:\Tools\zookeeper-3.4.14\bin' and run zkCli
+	Then a command promt will open
+	check whether the topic exist by pasting 'get /brokers/topics/<topic_name>' in there
+	remove topic permanently by pasting these 2 commands in cmd
+		rmr /brokers/topics/<topic_name>
+		rmr /admin/delete_topics/<topic_name>
 
